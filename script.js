@@ -32,6 +32,12 @@ increment.addEventListener("click",function(){
 decrement.addEventListener("click",function(){
     let value = parseInt(counter.innerHTML);
     value = value - incrdec;
+    if(value<0){
+        incrdec=1;
+        counter.innerHTML=0;
+        input.value = 0;
+        return;
+    }
     counter.innerHTML = value
 })
 
